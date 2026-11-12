@@ -1,0 +1,255 @@
+/* ==========================================
+   FOODWALA - CART PAGE STYLES (cart.css)
+   ========================================== */
+
+.cart-page-container {
+    width: 85%;
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 10px;
+}
+
+.cart-main-card {
+    background-color: var(--bg-main, #e4e9f0);
+    border-radius: var(--radius-lg, 24px);
+    box-shadow: var(--neu-outset, 7px 7px 14px #cbced1, -7px -7px 14px #ffffff);
+    padding: 30px 35px;
+}
+
+/* Page Heading - Kept at the top with reduced bottom margin */
+.cart-title {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--text-main, #2d3748);
+    margin-top: 0;
+    margin-bottom: 12px; /* Pulls emoji directly up */
+    text-align: center;
+    letter-spacing: -0.5px;
+}
+
+/* Individual Cart Item Row */
+.cart-item-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(203, 206, 209, 0.5);
+}
+
+.cart-item-row:last-of-type {
+    border-bottom: none;
+}
+
+.cart-item-img {
+    width: 90px;
+    height: 75px;
+    object-fit: cover;
+    border-radius: var(--radius-md, 16px);
+    box-shadow: var(--neu-outset-sm, 4px 4px 8px #cbced1, -4px -4px 8px #ffffff);
+}
+
+.cart-item-details {
+    flex: 1;
+}
+
+.cart-item-name {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-main, #2d3748);
+    margin-bottom: 6px;
+}
+
+.cart-item-price {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-muted, #718096);
+}
+
+/* Quantity Control Suite inside Cart */
+.cart-quantity-box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background-color: var(--bg-main, #e4e9f0);
+    padding: 6px 14px;
+    border-radius: var(--radius-md, 16px);
+    box-shadow: var(--neu-inset, inset 4px 4px 8px #cbced1, inset -4px -4px 8px #ffffff);
+}
+
+.cart-qty-btn {
+    width: 32px;
+    height: 32px;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--bg-main, #e4e9f0);
+    color: var(--text-main, #2d3748);
+    font-size: 16px;
+    font-weight: 800;
+    cursor: pointer;
+    box-shadow: var(--neu-outset-sm, 4px 4px 8px #cbced1, -4px -4px 8px #ffffff);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition, all 0.25s ease);
+}
+
+.cart-qty-btn:hover {
+    color: var(--primary, #ff5200);
+    box-shadow: var(--neu-inset, inset 2px 2px 4px #cbced1, inset -2px -2px 4px #ffffff);
+}
+
+.cart-qty-number {
+    min-width: 25px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 800;
+    color: var(--text-main, #2d3748);
+}
+
+/* Item Subtotal */
+.cart-item-subtotal {
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--primary, #ff5200);
+    min-width: 80px;
+    text-align: right;
+}
+
+/* Cart Footer & Summary */
+.cart-footer-section {
+    margin-top: 30px;
+    padding-top: 25px;
+    border-top: 2px solid rgba(203, 206, 209, 0.6);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 20px;
+}
+
+.cart-total-amount {
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--text-main, #2d3748);
+}
+
+.cart-total-amount span {
+    color: var(--primary, #ff5200);
+}
+
+/* Checkout Button */
+.cart-checkout-btn {
+    background-color: var(--primary, #ff5200);
+    color: white;
+    border: none;
+    padding: 14px 30px;
+    border-radius: var(--radius-md, 16px);
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 6px 6px 14px rgba(255, 82, 0, 0.3), 
+                -6px -6px 14px var(--shadow-light, #ffffff);
+    transition: var(--transition, all 0.25s ease);
+    text-decoration: none;
+}
+
+.cart-checkout-btn:hover {
+    background-color: var(--primary-hover, #e64900);
+    color: white;
+}
+
+.cart-checkout-btn:active {
+    box-shadow: inset 3px 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* ==========================================
+   TIGHT EMPTY CART STATE STYLING
+   ========================================== */
+
+.cart-empty-state {
+    text-align: center;
+    padding: 10px 20px 20px 20px; /* Minimal top padding */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cart-empty-icon-box {
+    margin-bottom: 6px;
+}
+
+.empty-cart-emoji {
+    font-size: 32px;
+}
+
+.empty-cart-heading {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--text-main, #2d3748);
+    margin: 4px 0 6px 0;
+}
+
+.empty-cart-message {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--text-muted, #718096);
+    margin: 0 0 20px 0;
+    max-width: 400px;
+    line-height: 1.4;
+}
+
+/* Neumorphic Primary Orange Explore Button */
+.btn-explore-restaurants {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 28px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #ffffff;
+    background-color: var(--primary, #ff5200);
+    text-decoration: none;
+    border-radius: var(--radius-md, 14px);
+    border: none;
+    cursor: pointer;
+    box-shadow: 6px 6px 14px rgba(255, 82, 0, 0.35), 
+                -6px -6px 14px #ffffff;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-explore-restaurants:hover {
+    background-color: var(--primary-hover, #e64900);
+    color: #ffffff;
+    box-shadow: 8px 8px 18px rgba(230, 73, 0, 0.45), 
+                -8px -8px 18px #ffffff;
+    transform: translateY(-2px);
+}
+
+.btn-explore-restaurants:active {
+    box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.3),
+                inset -4px -4px 8px rgba(255, 255, 255, 0.2);
+    transform: translateY(0);
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 768px) {
+    .cart-page-container {
+        width: 94%;
+        margin: 20px auto;
+    }
+    .cart-main-card {
+        padding: 20px;
+    }
+    .cart-item-row {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    .cart-item-subtotal {
+        margin-left: auto;
+    }
+    .cart-footer-section {
+        align-items: center;
+        text-align: center;
+    }
+}

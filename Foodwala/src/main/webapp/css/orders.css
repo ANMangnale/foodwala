@@ -1,0 +1,146 @@
+/* ==========================================
+   FOODWALA - ORDERS PAGE STYLES (orders.css)
+   ========================================== */
+
+.orders-title {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--text-main, #2d3748);
+    margin-top: 0;
+    margin-bottom: 25px;
+    text-align: center;
+    letter-spacing: -0.5px;
+}
+
+.orders-list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.order-card {
+    background-color: var(--bg-main, #e4e9f0);
+    border-radius: var(--radius-md, 16px);
+    box-shadow: var(--neu-inset, inset 4px 4px 8px #cbced1, inset -4px -4px 8px #ffffff);
+    padding: 22px;
+    transition: var(--transition, all 0.25s ease);
+}
+
+.order-card:hover {
+    box-shadow: var(--neu-inset-sm, inset 2px 2px 4px #cbced1, inset -2px -2px 4px #ffffff);
+}
+
+.order-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(203, 206, 209, 0.6);
+    padding-bottom: 14px;
+    margin-bottom: 15px;
+}
+
+.restaurant-title {
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--text-main, #2d3748);
+    margin-bottom: 4px;
+}
+
+.order-meta {
+    font-size: 13px;
+    color: var(--text-muted, #718096);
+    font-weight: 600;
+}
+
+.order-status-badge {
+    background-color: #48bb78;
+    color: white;
+    padding: 5px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    box-shadow: var(--neu-outset-sm, 3px 3px 6px rgba(72, 187, 120, 0.3), -3px -3px 6px #ffffff);
+}
+
+.order-items-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.order-item-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 0;
+    font-size: 15px;
+    color: var(--text-main, #2d3748);
+}
+
+.order-item-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.order-item-name {
+    font-weight: 700;
+    color: var(--text-main, #2d3748);
+}
+
+.order-item-qty {
+    font-size: 13px;
+    color: var(--text-muted, #718096);
+    font-weight: 600;
+}
+
+.order-item-price {
+    font-weight: 800;
+    color: var(--primary, #ff5200);
+}
+
+.order-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(203, 206, 209, 0.6);
+    padding-top: 14px;
+    margin-top: 15px;
+}
+
+.order-payment-label {
+    color: var(--text-muted, #718096);
+}
+
+.order-payment-value {
+    color: var(--text-main, #2d3748);
+    font-weight: 700;
+}
+
+.order-total-price {
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--text-main, #2d3748);
+}
+
+.order-total-price span {
+    color: var(--primary, #ff5200);
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 768px) {
+    .order-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+    .order-status-badge {
+        align-self: flex-start;
+    }
+    .order-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+}
